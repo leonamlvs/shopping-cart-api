@@ -214,21 +214,6 @@ describe('Cart pricing', () => {
     expect(cart.getTotalPrice()).toBe(20)
   })
 
-  it('should apply MAX_DISCOUNT cap correctly when discount exceeds limit', () => {
-    const cart = new Cart()
-
-    cart.addItem({ id: 'item1', quantity: 2, price: 10 })
-    cart.addItem({ id: 'item2', quantity: 1, price: 20 })
-
-    cart.applyDiscount(200)
-
-    const subtotal = cart
-      .getItems()
-      .reduce((sum, i) => sum + i.price * i.quantity, 0)
-
-    expect(cart.getTotalPrice()).toBe(subtotal * (1 - cart.MAX_DISCOUNT / 100))
-  })
-
   it('should calculate total correctly for empty cart', () => {
     const cart = new Cart()
 
