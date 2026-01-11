@@ -13,12 +13,6 @@ export default [
       parserOptions: {
         project: './tsconfig.json',
       },
-    },
-    rules: {
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'error',
-    },
-    languageOptions: {
       globals: {
         module: 'readonly',
         process: 'readonly',
@@ -26,9 +20,10 @@ export default [
         __dirname: 'readonly',
         __filename: 'readonly',
       },
-      parserOptions: {
-        project: './tsconfig.json',
-      },
+    },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
     },
   },
 
