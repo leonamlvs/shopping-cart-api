@@ -9,4 +9,8 @@ export class Cart {
     this.id = randomUUID()
     this.items = items
   }
+
+  addItem(item: CartItem) {
+    this.items.push(item)
+  }
 }
