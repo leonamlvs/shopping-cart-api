@@ -24,4 +24,16 @@ describe('Cart', () => {
 
     expect(cart.items).toHaveLength(1)
   })
+
+  it('should remove an item from the cart', () => {
+    const cart = new Cart()
+
+    cart.addItem({ id: 'item1', quantity: 1 })
+
+    expect(cart.items).toHaveLength(1)
+
+    cart.removeItem('item1')
+
+    expect(cart.items).toHaveLength(0)
+  })
 })

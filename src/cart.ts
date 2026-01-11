@@ -20,4 +20,8 @@ export class Cart {
 
     existingItem.quantity += item.quantity
   }
+
+  removeItem(itemId: string) {
+    this.items = this.items.filter((item) => item.id !== itemId)
+  }
 }
