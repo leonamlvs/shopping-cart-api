@@ -15,4 +15,13 @@ describe('Cart', () => {
 
     expect(cart.items).toHaveLength(1)
   })
+
+  it('should not allow duplicate items', () => {
+    const cart = new Cart()
+
+    cart.addItem({ id: 'item1', quantity: 1 })
+    cart.addItem({ id: 'item1', quantity: 1 })
+
+    expect(cart.items).toHaveLength(1)
+  })
 })

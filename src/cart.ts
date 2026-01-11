@@ -11,6 +11,13 @@ export class Cart {
   }
 
   addItem(item: CartItem) {
-    this.items.push(item)
+    const existingItem = this.items.find((i) => i.id === item.id)
+
+    if (!existingItem) {
+      this.items.push(item)
+      return
+    }
+
+    existingItem.quantity += item.quantity
   }
 }
