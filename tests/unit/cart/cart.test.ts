@@ -1,4 +1,4 @@
-import { Cart } from '../src/cart'
+import { Cart } from '../../../src/cart/cart'
 
 describe('Cart items', () => {
   it('should create an empty cart', () => {
