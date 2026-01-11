@@ -18,8 +18,17 @@ export default [
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'error',
     },
-    env: {
-      node: true,
+    languageOptions: {
+      globals: {
+        module: 'readonly',
+        process: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+      },
+      parserOptions: {
+        project: './tsconfig.json',
+      },
     },
   },
 
