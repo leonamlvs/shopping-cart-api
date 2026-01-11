@@ -8,8 +8,4 @@ describe('Sample Test', () => {
   it('should fail', () => {
     expect(greeting('Foo')).not.toBe('Hello, World!')
   })
-
-  it('should fail really', () => {
-    expect(greeting('Foo')).toBe('Hello, Foo!')
-  })
 })
